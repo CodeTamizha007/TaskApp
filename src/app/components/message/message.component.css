@@ -1,0 +1,35 @@
+.alert {
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+  position: relative;
+  font-size: 16px;
+}
+
+.alert-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.alert-error::before {
+  content: "❗"; 
+  font-size: 1.5em;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.alert .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: #721c24;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.alert .close:hover {
+  color: #a71d2a;
+}

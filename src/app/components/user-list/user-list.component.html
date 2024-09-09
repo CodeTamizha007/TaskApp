@@ -1,0 +1,49 @@
+
+<div class="user-list spinner-container" *ngIf="loading">
+  <mat-spinner ></mat-spinner>
+</div>
+
+<div class="user-list" *ngIf="!loading">
+  
+  <ng-container >
+    <div *ngFor="let user of users" class="user-card" (click)="viewUserDetail(user.id)">
+      <mat-card class="card  mat-elevation-z7">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>
+              <p>{{user.first_name | uppercase}} {{user.last_name | uppercase}}</p>
+            </mat-card-title>
+            <mat-card-subtitle class="large-subtitle">
+              
+              <div>User ID : {{user.id}} </div><div>{{user.email}} </div>
+            </mat-card-subtitle>
+
+            <img mat-card-lg-image [src]="user.avatar">
+          </mat-card-title-group>
+        </mat-card-header>
+
+      </mat-card>
+    </div>
+
+  </ng-container>
+  
+ 
+  
+
+</div>
+
+<nav aria-label="Page navigation" >
+  <ul class="pagination">
+    <li class="page-item">
+      <button class="page-button" [disabled]="currentPage === 1" (click)="loadPage(currentPage - 1)">Previous</button>
+    </li>
+    <li class="page-item" *ngFor="let page of list; let i=index">
+      <button class="page-button" [ngClass]="currentPage === i+1 ? 'active': '' "
+        (click)="loadPage(i+1)">{{i+1}}</button>
+    </li>
+    <li class="page-item" *ngIf="response?.total_pages">
+      <button class="page-button" [disabled]="currentPage === response?.total_pages"
+        (click)="loadPage(currentPage + 1)">Next</button>
+    </li>
+  </ul>
+</nav>

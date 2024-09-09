@@ -1,0 +1,53 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+   
+  }
+
+  .card{
+    min-width: 40vw;
+    padding-bottom: 3vh;
+    margin-top: 3vh;
+    background-color: aliceblue;
+  }
+
+  .large-title {
+    font-size: 30px; 
+    margin-bottom: 5vh;
+  }
+  
+  .large-subtitle {
+    font-size: 17px; 
+   color: rgb(77, 74, 74);
+  }
+
+  img{
+    border-radius: 20% !important ;
+  }
+
+  .page-button {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #020911;
+    background-color: white;
+    border: 1px solid #888a8d;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10vh;
+  }
+  
+  
+ 
+ 
+
+  

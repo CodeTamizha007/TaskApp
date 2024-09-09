@@ -1,0 +1,92 @@
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0 10vw;
+  box-sizing: border-box;
+  margin-bottom: 3vh;
+  min-height: 70vh;
+}
+
+.user-card img {
+  border-radius: 50%;
+}
+
+.pagination {
+  margin-top: 16px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .user-list {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-list {
+    grid-template-columns: 1fr;
+    padding: 0 2vw;
+  }
+}
+
+.card {
+  padding-bottom: 4vh;
+  background-color: aliceblue;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-button {
+  display: inline-block;
+  padding: 8px 16px;
+  color: #007bff;
+  background-color: white;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.large-subtitle {
+  font-size: 16px;
+  color: rgb(77, 74, 74);
+}
+
+.page-button:hover {
+  background-color: #e9ecef;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.page-button:disabled,
+.page-item.disabled .page-button {
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-color: #dee2e6;
+  cursor: not-allowed;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

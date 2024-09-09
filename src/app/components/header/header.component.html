@@ -1,0 +1,9 @@
+<nav class="navbar" >
+  <div class="container">
+    <a class="navbar-brand" routerLink="">TASK APP</a>
+    <form class="search-form" role="search">
+      <input class="search-input" type="search" placeholder="Search by User ID" name="search" [(ngModel)]="searchTerm" (input)="onSearch($event)" aria-label="Search">
+    </form>
+  </div>
+</nav>
+
